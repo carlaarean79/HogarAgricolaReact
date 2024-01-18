@@ -1,0 +1,282 @@
+/*div contenedor general de la navbar*/
+.contenedor-total {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100vw;
+    background-color: #05C9D5;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  /*div contenedor del span*/
+  .nav_toggle {
+    display: none;
+  }
+  
+  /*div contenedor header*/
+  .logo-cuenta {
+    width: 55vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  
+  }
+  
+  /*imagen logo header*/
+  .logo-cuenta img {
+    width: 10vw;
+    border-radius: 10px;
+  }
+  
+  /*div contenedor enlace cuenta*/
+  .cuenta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /*enlace cuenta*/
+  .cuenta a {
+    padding: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
+    font-family: 'Inria Serif', serif;
+  }
+  
+  /*label nav*/
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: solid black 0.5px;
+    border-top: solid black 0.5px;
+    background-color: white;
+    width: 100vw;
+    color: black;
+  
+  }
+  
+  
+  /*div contenedor primera parte de la nav*/
+  .primera {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+  }
+  
+  /*div contenedor segunda parte de la nav*/
+  .segunda {
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+  }
+  
+  /*enlace de la primera parte de la nav*/
+  .primera a {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+  
+  }
+  
+  /*enlace de la segunda parte de la nav*/
+  .segunda a {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: 'Inria Serif', serif;
+  }
+  
+  /*icono user*/
+  .icon {
+    margin-right: 20px;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  
+  }
+  
+  /*contenedor tercera parte de la navbar*/
+  .tercera {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: white;
+    width: 100vw;
+    border-bottom: solid black 0.5px;
+  
+  }
+  
+  /*enlace tercera parte navbar*/
+  .tercera a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*media query aplicada a partir de 600px*/
+  @media (max-width: 650px) {
+    .cuenta a {
+      font-size: 0.6rem;
+    }
+  
+    .icon {
+      font-size: 0.9rem;
+    }
+  
+    /*contenedores de navbar*/
+    .primera,
+    .segunda,
+    .tercera {
+      width: 100vw;
+    }
+  
+    /*enlaces navbar*/
+    .primera a {
+      margin-left: 5px;
+      font-size: 0.6rem;
+      padding: 0.3rem;
+    }
+  
+    .segunda a {
+      font-size: 0.6rem;
+    }
+  
+    .tercera a {
+      margin-right: 10px;
+      font-size: 0.6rem;
+      margin: 0;
+      padding: 5px;
+    }
+  }
+  
+  /*media query aplicada a partir de 360px para menú hamburguesa*/
+  @media (max-width: 600px) {
+  
+    .logo-cuenta {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      height: -webkit-fill-available;
+      width: 100vw;
+      justify-content: space-between;
+  
+    }
+  
+    .logo-cuenta img {
+      width: 20vw;
+  
+    }
+  
+    .segunda {
+      display: none;
+    }
+  
+    .header-nav {
+      position: fixed;
+      z-index: 2;
+      
+    }
+  
+    /*clases para mostrar u ocultar el menú hamburguesa*/
+    .header-nav.visible,
+    .primera.visible,
+    .segunda.visible,
+    .tercera.visible {
+      display: flex;
+      flex-direction: column;
+     
+      background-color: #05C9D5;
+      transform: translate(-120vw);
+  
+    }
+  
+    .primera,
+    .tercera {
+      display: flex !important;
+      flex-direction: column;
+      width: 100vw;
+      background-color: #05C9D5;
+      position: relative;
+      
+  
+    }
+  
+    .primera a {
+      text-align: left;
+      margin: 0;
+      font-size: 0.7rem;
+      font-style: bold;
+    }
+  
+    .tercera a {
+      font-size: 0.7rem;
+      font-style: bold;
+    }
+  
+     .tercera {
+      border: none;
+      height: 50vh;
+      z-index: 2;
+      margin: 0;
+    } 
+  
+    nav {
+      border: none;
+      background-color: #05C9D5;
+  
+    }
+  
+    /*menú hamburguesa*/
+    .nav_toggle {
+      display: flex !important;
+      flex-direction: column;
+      margin: 15px;
+      width: 12vw;
+      cursor: pointer;
+    }
+  
+    .nav_toggle span {
+      width: 30px;
+      height: 3px;
+      background: black;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      transform-origin: 5px 0px;
+      transition: all 0.2s linear;
+  
+    }
+  
+    .nav_toggle.open>span {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+  
+    .nav_toggle.open>span:nth-child(2) {
+      display: none;
+    }
+  
+    .nav_toggle.open>span:nth-child(3) {
+      transform: rotate(-45deg) translate(-5px, 1px);
+    }
+  
+    /*icono search*/
+    .icon {
+      margin-right: 5px;
+    }
+  }

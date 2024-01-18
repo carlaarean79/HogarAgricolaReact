@@ -1,0 +1,81 @@
+/* src/styles/fonts.css */
+
+@font-face {
+    font-family: 'LavishlyYours';
+    src: url('./src/assets/LavishlyYours-Regular.ttf') format('woff2');
+    /* Asegúrate de utilizar el formato correcto (woff2, woff, etc.) según la fuente */
+  }
+  
+
+
+
+/*div banner*/
+.banner {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(157, 135, 119);
+    width: 100vw;
+    height: 25vh;
+    border-radius: 20px;
+    opacity: 0.8;
+    margin-top: 40vh;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    /* Añadido para centrar el texto horizontalmente */
+
+    /* Añadido para alinear el contenido al centro verticalmente */
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*titulo banner*/
+.banner p {
+    font-family: 'LavishlyYours', cursive;
+    font-size: 8vw;
+    letter-spacing: 0.5rem;
+    color: white;
+    margin: 0 0;
+    padding: 0;
+    position: relative;
+
+}
+
+/*subtitulo banner*/
+.subtitulo {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.subtitulo p {
+    color: white;
+    font-size: 3vw;
+    letter-spacing: -0.1rem;
+    top: 17vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+}
+
+@media(max-width:600px){
+    .banner{
+        height: 18vh;
+        bottom: 400px;
+        
+    }
+    .banner p{
+        font-size: 10vw;
+    }
+    .subtitulo p{
+        font-size: 3.5vw;
+        top: 12vh;
+        padding: 5px;
+    }
+    .subtitulo{
+        width: 90vw;
+
+    }
+}
+
+

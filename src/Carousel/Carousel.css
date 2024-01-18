@@ -1,0 +1,43 @@
+.carrusel{
+    display: flex;
+    width: 80vw;
+    height: auto; 
+    position: relative;
+    z-index: 1;
+
+} 
+
+.img-carousel {
+    margin-top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+.img-carousel img {
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: 2/5;
+    object-fit:cover;
+}
+
+ @media(max-width:600px){
+    .carrusel{
+        bottom: 20px;
+    }
+    .img-carousel img{
+        height: 60vh;
+       
+    }
+    .img-carousel {
+        height: 50vh;
+       top: 0;
+    }
+ 
+  
+}

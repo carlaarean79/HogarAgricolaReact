@@ -1,0 +1,22 @@
+h1 {
+    color: #333;
+  }
+
+.container-home{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carrusel-container{
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+}

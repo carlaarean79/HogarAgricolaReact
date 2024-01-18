@@ -1,0 +1,97 @@
+.tutoriales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    width: 80vw;
+
+
+
+
+
+}
+
+.cards {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 300px;
+    width: 30vw;
+    height: 65vh;
+    max-height: 500px;
+    box-sizing: border-box;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: -20px 2.5rem 50px 2.5rem;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+
+
+}
+
+.cards img {
+    width: 80%;
+    height: 250px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 10px;
+    border: solid black 1px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cards h3 {
+    font-size: 24px;
+    text-align: center;
+        color: black;
+        letter-spacing: -1px;
+        font-family: initial;
+        margin: 0;
+        padding: 0;
+    
+}
+
+.cards h4 {
+   margin: 0;
+   padding: 0;
+    color: black;
+    font-family: initial;
+}
+
+@media (max-width:830px) {
+    .cards {
+        width: 35vw;
+        height: 60vh;
+        margin: -20px 5rem 50px 5rem;
+
+    }
+
+    
+}
+@media (max-width:640px) {
+    .cards {
+        width: 45vw;
+        max-width: 400px;
+        height: 70vh;
+        margin: -20px 0rem 50px 0rem;
+
+    }
+
+    
+}
+@media (max-width:530px) {
+    .cards {
+        width: 50vw;
+        max-width: 600px;
+        height: 70vh;
+        margin: -20px 0rem 50px 0rem;
+
+    }
+
+    
+}
