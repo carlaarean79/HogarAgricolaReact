@@ -50,6 +50,18 @@ function Header() {
             <RiFileSearchFill className="icon" />
           </div> 
         </nav>
+        <nav>
+          <div className="tercera">
+            <Link to='cocina'>COCINA</Link>
+            <Link to='crochet'>CROCHET</Link>
+            <Link to='macrame'>MACRAMÉ</Link>
+            <Link to='pinturaTela'>PINTURA SOBRE TELA</Link>
+            <Link to='pinturaMadera'>PINTURA SOBRE MADERA</Link>
+            <Link to='reciclado'>RECICLADO</Link>
+            <Link to='porcelana'>PORCELANA</Link>
+            <Link to='peluqueria'>PELUQUERÍA</Link>
+          </div>
+        </nav>
       
       </div>
     </div>
