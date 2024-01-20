@@ -53,6 +53,7 @@
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+    font-family: 'Inria-Serif';
    
     
   }
@@ -87,7 +88,7 @@
   
   /*enlace de la primera parte de la nav*/
   .primera a {
-   
+   font-family: 'Inria-Serif';
     text-align: center;
     font-size: 0.9rem;
     padding: 0.5rem;
@@ -104,7 +105,7 @@
     padding: 0.5rem;
     text-decoration: none;
     color: black;
-    font-family: 'Inria Serif', serif;
+    font-family: 'Inria-Serif';
   }
   
   /*icono user*/
