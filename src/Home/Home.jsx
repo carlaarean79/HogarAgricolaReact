@@ -12,9 +12,9 @@ function Home() {
       <Banner titulo={'Hogar Agrícola'} subtitulo={'El hogar del bricolage'}/>
       <TituloCards texto={'AGREGADOS RECIENTEMENTE'}/>
       </div>
-      <div className="cards-container">
+      
            <CardsRecientes/>
-      </div>
+      
          </div>
   );
 }

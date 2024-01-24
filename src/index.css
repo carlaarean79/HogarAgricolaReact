@@ -1,8 +1,6 @@
 :root {
   font-family: 'Inria-Serif',;
-  line-height: 1.5;
-  font-weight: 400;
-  background-color: rgba(157, 135, 119, 0.48);
+   background-color: rgba(157, 135, 119, 0.48);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +9,7 @@
 body{
   margin: 0;
   padding: 0;
+  display: flex;
 }
 /* a {
   font-weight: 500;

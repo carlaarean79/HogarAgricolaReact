@@ -60,8 +60,8 @@
 
 @media(max-width:600px){
     .banner{
-        height: 18vh;
-        bottom: 400px;
+        height: 15vh;
+        bottom: 350px;
         
     }
     .banner p{
@@ -69,8 +69,8 @@
     }
     .subtitulo p{
         font-size: 3.5vw;
-        top: 12vh;
-        padding: 5px;
+        top: 10vh;
+        padding: 0px;
     }
     .subtitulo{
         width: 90vw;
