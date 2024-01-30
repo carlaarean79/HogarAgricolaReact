@@ -1,58 +1,56 @@
-footer{
+footer {
     width: 100%;
-    height: 035h;
+    height: 400px;
     background-color: #05C9D5;
     bottom: 0;
     display: flex;
-    justify-content: center;
-}
-.container-footer{
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
+
     justify-content: space-around;
-    align-content: center;
 }
-.container-footer p{
-    bottom: 20px;
-}
-.logo{
+
+.container-footer {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    width: 20vw;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    margin: 50px;
+}
+
+.logo img {
+    width: 10vw;
+    border-radius: 10px;
 
 }
-.logo img{
-     width: 10vw;
-    border-radius: 10px;
-    margin: 25px;
-}
+
 .primeros-enlaces a,
 .segundos-enlaces a,
-.terceros-enlaces a{
+.terceros-enlaces a {
     text-decoration: none;
     color: black;
     font-size: 0.8rem;
     text-transform: uppercase;
     width: 10vw;
 }
-.primeros-enlaces,.segundos-enlaces,.terceros-enlaces{
+
+.primeros-enlaces,
+.segundos-enlaces,
+.terceros-enlaces {
     display: flex;
     flex-direction: column;
-    margin: 25px;
-    margin: 60px 0px 10px 30px;
+    margin: 60px;
     line-height: 3;
-   
+
 }
 
-.icono-redes{
-   padding: 20px;
-   font-size: 2rem;
-    
+.icono-redes {
+    padding: 20px;
+    font-size: 2rem;
+
 }
-.redes{
+
+.redes {
     width: 20vw;
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +59,38 @@ footer{
     align-items: center;
     margin: 50px 0px 0px 0px;
 }
-.redes p{
+
+.redes p {
     font-size: 0.8rem;
     text-transform: bold;
+}
+
+.copy-p p {
+    display: flex;
+
+    margin: 0%;
+}
+@media (max-width:768px) {
+
+    footer {
+        height: 60vh;
+        
+    }
+    .primeros-enlaces,.segundos-enlaces,.terceros-enlaces{
+        flex-direction: row;
+        width: 10vw;
+        margin: 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    .logo img{
+        width: 20vw;
+    }
+    .redes{
+        width: 100%;
+        margin: 0;
+    }
+   
 }

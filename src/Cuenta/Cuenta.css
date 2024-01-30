@@ -1,0 +1,65 @@
+/*contenedor total*/
+.cuenta-containerAll {
+    min-height: 500px;
+    margin: 100px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    object-fit: cover;
+}
+/*contenedor titulo bienvenido*/
+.bienvenido {
+  
+    margin: 20px;
+    
+}
+/*h1 titulobienvenido*/
+.bienvenido h1{
+    text-align: center;
+}
+/*contenedor total de perfil y tutorial*/
+.containerAll-perfil-tutorial {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 20px 20px 0px;
+    width: 100%;
+
+
+}
+/*contenedor de perfil*/
+.container-perfil {
+   
+    width: 40%;
+    height: auto;
+    max-height: 80vh;
+    margin: 10px 0;
+    padding: 0;
+    background-color: rgba(5, 201, 213, 1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container-perfil h1{
+    width: 100%;
+    text-align: center;
+}
+/*contenedor de tutorial*/
+.container-tutorial {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(5, 201, 213, 1);
+    width: 50%;
+    height: auto;
+    min-height: max-content;
+    margin: 10px;
+    padding: 0;
+}
+.container-tutorial h1 {
+    width: 100%;
+    text-align: center;
+}

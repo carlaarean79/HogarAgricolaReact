@@ -1,24 +1,29 @@
-import React, { useContext } from 'react'
-import {ContextTallerMacrame} from '../ContextCards/ContextTallerMacrame'
-import './CardsMacrame.css'
+// CardsMacrame.jsx
+import React, { useContext } from 'react';
+import { ContextTallerMacrame } from '../ContextCards/ContextTallerMacrame';
+import './CardsMacrame.css';
 
+const CardsMacrame = () => {
+    const { TallerMacrame, addTutorialMacrame, setAddTutorialMacrame } = useContext(ContextTallerMacrame);
 
-function CardsMacrame() {
-    const macrame = useContext(ContextTallerMacrame);
-  return (
-    <div className='tutoriales'>
-        {macrame.map((macrame) => (
-            <div className="cards-macrame" key={macrame.id}>
-                <h3>{macrame.nombre}</h3>
-                <img src={macrame.imagen} alt={macrame.nombre} />
-                <div className="container-btn">
-                <button className='btn-watch'>Ver</button>
-                <button className='btn-add'>Guardar</button>
+    const saveTutorial = (tutorial) => {
+        setAddTutorialMacrame([...addTutorialMacrame, tutorial]);
+    };
+
+    return (
+        <div className='tutoriales'>
+            {TallerMacrame.map((tutorial) => (
+                <div className="cards-macrame" key={tutorial.id}>
+                    <h3>{tutorial.nombre}</h3>
+                    <img src={tutorial.imagen} alt={tutorial.nombre} />
+                    <div className="container-btn">
+                        <button className='btn-watch'>Ver</button>
+                        <button className='btn-add' onClick={() => saveTutorial(tutorial)}>Guardar</button>
+                    </div>
                 </div>
-            </div>
-        ))}
-    </div>
-  )
-}
+            ))}
+        </div>
+    );
+};
 
 export default CardsMacrame;

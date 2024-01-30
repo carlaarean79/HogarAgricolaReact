@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Inria-Serif',;
+  font-family: 'Inria-Serif';
    background-color: rgba(157, 135, 119, 0.48);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -7,9 +7,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body{
-  margin: 0;
+  margin: 50px 0px 0px 0px;
   padding: 0;
   display: flex;
+ 
 }
 /* a {
   font-weight: 500;

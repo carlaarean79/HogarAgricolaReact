@@ -1,0 +1,83 @@
+/*contenedor total*/
+.container-cards-add {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 48vw;
+    min-height: 35vh;
+    max-height: 50vh;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 1);
+    background-color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 1);
+    
+      
+}
+/*imagen*/
+.container-cards-add img{
+    width: 18vw;
+    height: 32vh;
+    margin: 5px;
+    border-radius: 10px;
+    border: solid 0.5px black;
+    object-fit: cover;
+    
+}
+/*contenedor texto card*/
+.texto {
+    width: 50%;
+}
+/*titulo card*/
+.texto h2{
+    text-decoration:underline;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0;
+}
+/*parrafo card*/
+.texto p{
+    text-align: justify;
+}
+/*contenedor botones*/
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+/*botones*/
+.buttons button{
+    width: 10vw;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(240, 239, 239, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+/*boton ver*/
+.btn-see{
+    background-color: rgba(5, 201, 213, 1);
+}
+.btn-see:hover{
+    background-color: rgba(5, 201, 213, 0.64);
+}
+/*boton delete*/
+.btn-delete {
+    background: linear-gradient(0deg, #000000, #000000),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+color: white;
+
+}
+.btn-delete:hover{
+    background: linear-gradient(0deg, #4B4A4A, #4B4A4A),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+}
+@media(max-width:768px){
+    .container-cards-add p{
+        overflow: hidden;
+    }
+}

@@ -3,7 +3,7 @@ import CardsMacrame from '../Cards/CardsMacrame'
 import Banner from '../Banner/Banner'
 import './Macrame.css'
 
-function Macrame() {
+const Macrame = ()=> {
   return (
     <div className='container-sección-macrame'>
       <div className="encabezado-macrame">

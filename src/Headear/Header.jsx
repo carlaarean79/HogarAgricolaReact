@@ -2,11 +2,12 @@ import { FaUserCircle } from "react-icons/fa";
 import React, { useState } from 'react';
 import './Header.css';
 import { RiFileSearchFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BiCaretDown } from "react-icons/bi";
 function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [talleresVisible, setTalleresVisible] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {//aternar Menú
     setMenuVisible(!menuVisible);
@@ -20,6 +21,7 @@ function Header() {
   };
   //si telleres visible es true se convierte false y viceversa
 
+  const hiddenRoutes = ["/talleres","/sobreNosotros", "/search", "/cuenta", "/cocina", "/macrame", "/crochet", "/porcela", "/pinturaTela", "/pinturaMadera", "/reciclado", "/peluqueria"];
   return (
     <>
       <div className="contenedor-total">
@@ -41,40 +43,45 @@ function Header() {
             <div className='primera'>
               <Link to='/'>HOME</Link>
               <Link to='sobreNosotros'>SOBRE NOSOTROS</Link> {/*Agregar un onClick para manejar el menú desplegable de talleres */}
-              
-              <div onClick={toggleTalleresMenu} className="talleres">
-                TALLERES<BiCaretDown/>
-                {talleresVisible && (
-                  <div className="submenu-talleres"/* {`submenu-talleres ${!submenuVisible ? 'open' : ''}`} */>
-                    <Link to='cocina'>COCINA</Link>
-                    <Link to='crochet'>CROCHET</Link>
-                    <Link to='macrame'>MACRAMÉ</Link>
-                    <Link to='porcelana'>PORCELANA</Link>
-                    <Link to='pinturaTela'>PINTURA SOBRE TELA</Link>
-                    <Link to='pinturaMadera'>PINTURA SOBRE MADERA</Link>
-                    <Link to='reciclado'>RECICLADO</Link>
-                    <Link to='peluqueria'>PELUQUERÍA</Link>
-                  </div>
-                )}
-              </div>
+
+           
+                <Link to='talleres'>TALLERES</Link>
+                <div onClick={toggleTalleresMenu} className="talleres">
+                  <BiCaretDown />
+                  {talleresVisible && (
+                    <div className="submenu-talleres"/* {`submenu-talleres ${!submenuVisible ? 'open' : ''}`} */>
+                      <Link to='cocina'>COCINA</Link>
+                      <Link to='crochet'>CROCHET</Link>
+                      <Link to='macrame'>MACRAMÉ</Link>
+                      <Link to='porcelana'>PORCELANA</Link>
+                      <Link to='pinturaTela'>PINTURA SOBRE TELA</Link>
+                      <Link to='pinturaMadera'>PINTURA SOBRE MADERA</Link>
+                      <Link to='reciclado'>RECICLADO</Link>
+                      <Link to='peluqueria'>PELUQUERÍA</Link>
+                    </div>
+                  )}
+
+                 </div>
             </div>
             <div className='segunda'>
               <Link to='search'>BUSCAR</Link>
               <RiFileSearchFill className="icon" />
             </div>
           </nav>
-          <nav>
-          <div className="tercera">
-            <Link to='cocina'>COCINA</Link>
-            <Link to='crochet'>CROCHET</Link>
-            <Link to='macrame'>MACRAMÉ</Link>
-            <Link to='pinturaTela'>PINTURA SOBRE TELA</Link>
-            <Link to='pinturaMadera'>PINTURA SOBRE MADERA</Link>
-            <Link to='reciclado'>RECICLADO</Link>
-            <Link to='porcelana'>PORCELANA</Link>
-            <Link to='peluqueria'>PELUQUERÍA</Link>
-          </div>
-        </nav>
+          {hiddenRoutes.includes(location.pathname) === false && (//Verifica si la ruta actual está en la lista de rutas ocultas
+            <nav>
+              <div className="tercera">
+                <Link to='cocina'>COCINA</Link>
+                <Link to='crochet'>CROCHET</Link>
+                <Link to='macrame'>MACRAMÉ</Link>
+                <Link to='pinturaTela'>PINTURA SOBRE TELA</Link>
+                <Link to='pinturaMadera'>PINTURA SOBRE MADERA</Link>
+                <Link to='reciclado'>RECICLADO</Link>
+                <Link to='porcelana'>PORCELANA</Link>
+                <Link to='peluqueria'>PELUQUERÍA</Link>
+              </div>
+            </nav>
+          )}
         </div>
       </div>
     </>

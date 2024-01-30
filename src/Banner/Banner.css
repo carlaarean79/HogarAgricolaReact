@@ -4,8 +4,8 @@
     font-family: 'LavishlyYours';
     src: url('./src/assets/LavishlyYours-Regular.ttf') format('woff2');
     /* Asegúrate de utilizar el formato correcto (woff2, woff, etc.) según la fuente */
-  }
-  
+}
+
 
 
 
@@ -19,6 +19,7 @@
     border-radius: 20px;
     opacity: 0.8;
     margin-top: 40vh;
+    bottom: 400px;
     position: absolute;
     z-index: 1;
     text-align: center;
@@ -37,7 +38,7 @@
     letter-spacing: 0.5rem;
     color: white;
     margin: 0 0;
-    padding: 0;
+    padding: 5px;
     position: relative;
 
 }
@@ -51,31 +52,34 @@
 
 .subtitulo p {
     color: white;
-    font-size: 3vw;
+    font-size: 2.5em;
     letter-spacing: -0.1rem;
     top: 17vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
 }
 
-@media(max-width:600px){
-    .banner{
-        height: 15vh;
-        bottom: 350px;
-        
+@media(max-width:768px) {
+    .banner {
+        height: 10vh;
+        bottom: 735px;
+        padding: 5px;
+
     }
-    .banner p{
-        font-size: 10vw;
+
+    .banner p {
+        font-size: 4em;
     }
-    .subtitulo p{
-        font-size: 3.5vw;
-        top: 10vh;
+
+    .subtitulo p {
+        font-size: 1.5em;
+        top: 75px;
         padding: 0px;
+        width: 30vw;
     }
-    .subtitulo{
+
+    .subtitulo {
         width: 90vw;
 
     }
 }
-
-

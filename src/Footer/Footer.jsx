@@ -36,7 +36,10 @@ function Footer() {
           </div>
           <p>SEGUINOS EN NUESTRAS REDES</p>
         </div>
+        <div className='copy-p'>
              <p>&copy; Carla Areán 2024 </p> 
+        </div>
+       
       </div>
   
     </footer>

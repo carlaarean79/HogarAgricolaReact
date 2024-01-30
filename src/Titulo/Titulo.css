@@ -23,13 +23,13 @@
     font-family: 'Inria Serif', serif;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
     .titulo {
-        height: 8vh;
-        margin-top: 55vh;
+        height: 6vh;
+        margin-top: 59vh;
     }
 
     .titulo p {
-        font-size: 4vw;
+        font-size: 2rem;
     }
 }

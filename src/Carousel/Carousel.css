@@ -26,17 +26,18 @@
     object-fit:cover;
 }
 
- @media(max-width:600px){
+ @media(max-width:768px){
     .carrusel{
-        bottom: 20px;
+           bottom: 100px;
+           
     }
     .img-carousel img{
         height: 60vh;
-       
+        
     }
     .img-carousel {
         height: 50vh;
-       top: 0;
+       top: 20px;
     }
  
   

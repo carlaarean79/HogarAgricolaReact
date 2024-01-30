@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Headear/Header';
 import Macrame from './TallerMacrame/Macrame';
 import Cuenta from './Cuenta/Cuenta';
-function App() {
+const App = ()=> {
   
   return (
     <div>
@@ -14,7 +14,7 @@ function App() {
        <Routes>
         <Route path='/' element={<Home />}/>
        
-        <Route path='Cuenta' element={<Cuenta /> }/> 
+         <Route path='cuenta' element={<Cuenta />}/>  
         <Route path='macrame' element={<Macrame/>}/>
       </Routes> 
       <Footer />
