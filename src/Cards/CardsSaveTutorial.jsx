@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CardsSaveTutorial() {
+const CardsSaveTutorial=()=> {
   return (
     <div className="container-cards-add" key={tutorial.id}>
     <img src={tutorial.imagen} alt={tutorial.nombre} />

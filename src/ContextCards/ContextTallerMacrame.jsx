@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect } from 'react';
 export const ContextTallerMacrame = createContext({});
 
 export const MacrameProvider = ({ children }) => {
-    const url = 'http://localhost:3030/macrame';
+    const url = 'http://localhost:3030/talleres';
     const [TallerMacrame, SetTallerMacrame] = useState([]);
     const [addTutorialMacrame, setAddTutorialMacrame] = useState([]);
 
