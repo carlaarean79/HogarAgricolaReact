@@ -32,3 +32,11 @@
         font-size: 6em;
     }
 }
+@media(max-width:390px){
+    .encabezado-macrame img{
+        height: 30vh;
+    }
+    .encabezado-macrame p{
+        font-size: 4em;
+    }
+}

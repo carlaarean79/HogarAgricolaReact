@@ -73,7 +73,7 @@ footer {
 @media (max-width:768px) {
 
     footer {
-        height: 60vh;
+        height: 50vh;
         
     }
     .primeros-enlaces,.segundos-enlaces,.terceros-enlaces{
@@ -85,6 +85,11 @@ footer {
         align-items: center;
         
     }
+    .primeros-enlaces a, .segundos-enlaces a, .terceros-enlaces a{
+        width: 50vw;
+        line-height: 2;
+       
+   }
     .logo img{
         width: 20vw;
     }
@@ -93,4 +98,29 @@ footer {
         margin: 0;
     }
    
+}
+
+@media(max-width:390px){
+    .primeros-enlaces,.segundos-enlaces,.terceros-enlaces{
+        width: 15vw;
+        margin: 30px;
+        flex-direction: column;
+    
+    }
+    .logo img{
+        width: 30vw;
+    }
+    footer{
+        height: 60vh;
+    }
+    .primeros-enlaces a, .segundos-enlaces a, .terceros-enlaces a{
+         width: 50vw;
+         line-height: 2;
+         font-size: 0.6em
+        
+    }
+    .container-footer{
+      margin: 55px;
+    }
+
 }

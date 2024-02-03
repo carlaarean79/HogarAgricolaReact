@@ -19,7 +19,7 @@
     border-radius: 20px;
     opacity: 0.8;
     margin-top: 40vh;
-    bottom: 400px;
+    bottom: 250px;
     position: absolute;
     z-index: 1;
     text-align: center;
@@ -59,6 +59,8 @@
     position: absolute;
 }
 
+
+
 @media(max-width:768px) {
     .banner {
         height: 10vh;
@@ -82,4 +84,22 @@
         width: 90vw;
 
     }
+}
+@media(max-width:390px){
+    .banner {
+        height: 7vh;
+        bottom: 620px;
+        padding: 5px;
+
+    }
+    .banner p {
+        font-size: 3em;
+    }
+    .subtitulo p {
+        font-size: 1em;
+        top: 45px;
+        padding: 0px;
+        width: 35vw;
+    }
+   
 }
