@@ -44,7 +44,7 @@ function Header() {
               <Link to='/'>HOME</Link>
               <Link to='sobreNosotros'>SOBRE NOSOTROS</Link> {/*Agregar un onClick para manejar el menú desplegable de talleres */}
 
-           
+              <Link to='registro'>REGISTRO</Link>
                 <Link to='talleres'>TALLERES</Link>
                 <div onClick={toggleTalleresMenu} className="talleres">
                   <BiCaretDown />

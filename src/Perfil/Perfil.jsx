@@ -5,7 +5,6 @@ import { HiOutlinePencil, HiPlusCircle } from "react-icons/hi2";
 const Perfil = () => {
    const [inputVisible, setInputVisible] = useState(false);
    const [formData, setFormData] = useState({
-    id:"",
     nombre:"",
     apellido:"",
     direccion:"",
@@ -48,7 +47,7 @@ const Perfil = () => {
            
             setInputVisible(false);
          })
-         .catch(error => console.error(error));
+         
       } catch (error) {
          console.error('Error al guardar los datos:', error);
       }

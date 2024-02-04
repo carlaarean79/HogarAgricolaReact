@@ -1,0 +1,18 @@
+.containerAllRegistro{
+    display: flex;
+    position: relative; 
+    width: 40vw;
+    margin-top: 35vh;
+    height: 500px;
+}
+.containerAllInput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 20px;
+}
