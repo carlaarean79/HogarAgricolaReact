@@ -15,18 +15,18 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: auto;
-    max-height: 90vh;
+    height: 90vh;
+    max-height: 300vh;
     margin: 5px 0;
     background-color: rgba(5, 201, 213, 1);
     padding: 0;
 }
 
 .container-infoUser h1 {
- 
+
     width: 100%;
     text-align: center;
-    
+
 }
 
 .infoUser {
@@ -40,13 +40,16 @@
 .label {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     padding: 5px;
-    align-items: center;
+
+
 }
 
 .label h3 {
     width: 20%;
     font-size: 1em;
+    margin: 5px;
 }
 
 .label p {
@@ -57,22 +60,24 @@
 }
 
 .icon-perfil {
-    width: 10%;
+    width: 15%;
     margin-top: 5px;
-    font-size: 1.5em;
-
-
+    font-size: 1.8em;
+    cursor: pointer;
 }
 
- .infoUser-input {
+.infoUser-input {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
     max-height: 150vh;
 }
-.infoUser-input input{
-    width: 25vw;
+
+.infoUser-input input {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
     padding: 5px;
     margin: 15px;
     border-top: 0;
@@ -80,25 +85,113 @@
     border-left: 0;
     background-color: rgba(5, 201, 213, 1);
     border-bottom: 1px solid #070707;
-   
+
 }
+
 .btns {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin: 5px;
 }
-.btns button{
-    width: 7vw;
-height: 20px;
-border-radius: 6px;
-margin: 3px;
+
+.btns button {
+    width: 10vw;
+    border-radius: 6px;
+    margin: 3px;
+    font-size: 0.8em;
+    font-family: 'Inria-Serif';
+    font-weight: bold;
+}
+
+.btn-update {
+    background-color: rgba(5, 201, 213, 1);
+    border: solid rgba(240, 239, 239, 1) 1px;
+    box-shadow: 0px 5px 5px grey;
+
+}
+
+.btn-update:hover {
+    background-color: rgba(163, 228, 228, 1);
+}
+
+button {
+    cursor: pointer;
+
 }
 
 
 @media(max-width:768px) {
     .containerAll-perfil-tutorial {
-        flex-direction: column;
+        display: flex;
+
+    }
+
+    .container-infoUser {
+
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        margin: 5px 0;
+        background-color: rgba(5, 201, 213, 1);
+        padding: 0;
+    }
+
+    .infoUser-input input {
+        width: 85vw;
+
+
+
+
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5px;
+    }
+
+    .btns button {
+        width: 20vw;
+        height: 35px;
+
     }
 }
 
-@media(max-width:390px) {}
+@media(max-width:390px) {
+    .containerAll-perfil-tutorial {
+        height: 200vh;
+
+    }
+
+    .container-infoUser {
+        height: 150vh;
+
+    }
+
+    .infoUser-input input {
+        width: 75vw;
+
+    }
+
+    .infoUser-input {
+        flex-direction: column;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    .btns button {
+        width: 25vw;
+        height: 35px;
+
+    }
+    .label p {
+        width: 50%;
+       
+    }
+}

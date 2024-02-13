@@ -19,7 +19,7 @@ export const MacrameProvider = ({ children }) => {
     }, []);
 
     return (
-        <ContextTallerMacrame.Provider value={{ TallerMacrame, addTutorialMacrame, setAddTutorialMacrame }}>
+        <ContextTallerMacrame.Provider value={{ TallerMacrame, addTutorialMacrame, setAddTutorialMacrame, url }}>
             {children}
         </ContextTallerMacrame.Provider>
     );

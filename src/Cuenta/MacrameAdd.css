@@ -77,7 +77,21 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
 
 }
 @media(max-width:768px){
-    .container-cards-add p{
-        overflow: hidden;
+    /*contenedor total*/
+    .container-cards-add {
+        width: 87vw;
+        min-height: 25vh;
+        max-height: 20vh;
+ 
+    }
+    /*imagen*/
+    .container-cards-add img{
+        width: 23vw;
+    }
+
+    /*botones*/
+    .buttons button{
+        width: 20vw;
+          
     }
 }

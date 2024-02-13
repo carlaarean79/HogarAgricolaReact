@@ -6,6 +6,8 @@ import Header from './Headear/Header';
 import Macrame from './TallerMacrame/Macrame';
 import Cuenta from './Cuenta/Cuenta';
 import Registro from './Registro/Registro';
+import Login from './Registro/Login';
+
 const App = ()=> {
   
   return (
@@ -15,6 +17,7 @@ const App = ()=> {
        <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='registro' element={<Registro />}/>
+        <Route path='login' element={<Login/>}/>
          <Route path='cuenta' element={<Cuenta />}/>  
         <Route path='macrame' element={<Macrame/>}/>
       </Routes> 

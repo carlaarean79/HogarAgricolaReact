@@ -43,7 +43,7 @@ function Header() {
             <div className='primera'>
               <Link to='/'>HOME</Link>
               <Link to='sobreNosotros'>SOBRE NOSOTROS</Link> {/*Agregar un onClick para manejar el menú desplegable de talleres */}
-
+              <Link to={'login'}>Login</Link>
               <Link to='registro'>REGISTRO</Link>
                 <Link to='talleres'>TALLERES</Link>
                 <div onClick={toggleTalleresMenu} className="talleres">

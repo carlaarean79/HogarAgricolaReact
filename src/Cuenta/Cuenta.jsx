@@ -5,7 +5,6 @@ import './Cuenta.css'
 import Perfil from '../Perfil/Perfil';
 
 const Cuenta= () => {
-    const {addTutorialMacrame} = useContext(ContextTallerMacrame);
 
   return  (
     <>
