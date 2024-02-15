@@ -36,20 +36,21 @@ const Perfil = () => {
             })
            
     },[]);//fin useEffect
-
+    console.log(lastLogged);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const toggleInput = () => {
-        na
-        setInputVisible(!inputVisible);
+        setInputVisible(!inputVisible);//!inputVisible no funciona para el boton cancelar
+        console.log('togle funcion llamada');
 
     }
+    console.log(!inputVisible);
 
 
 
-    const upDateData = (e, id) => {
+    /* const upDateData = (e, id) => {
         e.preventDefault(); // Evita que el formulario se envíe automáticamente
         const newData = {
             id: formData.id,
@@ -85,7 +86,7 @@ const Perfil = () => {
 
 
             })
-             };
+             }; */
 
 
 
@@ -96,8 +97,8 @@ const Perfil = () => {
 
                 <>
                     <div className="btns">
-                        <Button className='btn-update' type={'submit'} title={'Editar'} onClick={upDateData} />
-                        <Button className={'btn-delete'} title={'Cancelar'} onClick={()=> toggleInput} />
+                        <Button className='btn-update' type={'submit'} title={'Editar'} />
+                        <Button className={'btn-delete'} title={'Cancelar'}  onClick={()=> toggleInput()}  />
                     </div>
                     <Input className='infoUser-input' placeholder='Nombre' type="text" name='nombre' value={formData.nombre} onChange={handleChange} />
                     <Input className='infoUser-input' placeholder='Apellido' type="text" name='apellido' value={formData.apellido} onChange={handleChange} />
