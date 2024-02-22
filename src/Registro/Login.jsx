@@ -38,7 +38,7 @@ const handleSubmit = async (e)=>{
 
   
   const validarUser = user.some(el => el.email == email && el.contraseña == contraseña);
-  if(validarUser){//si !validarUser no funciona
+  if(!validarUser){
     console.log(validarUser);
     Swal.fire({
       text: "Email o contraseña incorrectos",

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
-import { ContextTallerMacrame } from '../ContextCards/ContextTallerMacrame'
-import MacrameAdd from './MacrameAdd';
+import AddTaller from '../Cuenta/AddTaller';
 import './Cuenta.css'
 import Perfil from '../Perfil/Perfil';
 
@@ -17,7 +16,7 @@ const Cuenta= () => {
        <Perfil/>
       <div className='container-tutorial'>
       <h1>MIS TUTORIALES</h1>
-        <MacrameAdd/>
+        <AddTaller />
       </div>
       </div>
        

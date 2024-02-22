@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Perfil.css';
-import { HiOutlinePencil, HiPlusCircle } from "react-icons/hi2";
+import {  HiPlusCircle } from "react-icons/hi2";
 import Button from '../Button/Button';
 import Input from '../input/input';
 import Swal from 'sweetalert2'
@@ -33,10 +33,46 @@ const Perfil = () => {
                     ...usuarioLogueado
                 
                 })
+                
             })
            
     },[]);//fin useEffect
     console.log(lastLogged);
+    
+    const upDateData = (e) => {
+        e.preventDefault();
+        fetch(urlUsers + '/' + formData.id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Ha ocurrido un error con el servidor. Los datos no han sido modificados');
+            }
+            return response.json(); // Importante: devolver los datos de respuesta en caso de éxito
+        })
+        .then(data => {
+            // Manejar la respuesta exitosa si es necesario
+            console.log('Datos actualizados correctamente:', data);
+            Swal.fire(
+                'Éxito',
+                'Los datos han sido modificados exitosamente',
+                'success'
+            );
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire(
+                'Error',
+                'Ha ocurrido un error al modificar los datos',
+                'error'
+            );
+        });
+    };
+    
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -50,43 +86,7 @@ const Perfil = () => {
 
 
 
-    /* const upDateData = (e, id) => {
-        e.preventDefault(); // Evita que el formulario se envíe automáticamente
-        const newData = {
-            id: formData.id,
-            nombre: formData.nombre,
-            apellido: formData.apellido,
-            direccion: formData.direccion,
-            edad: formData.edad,
-            email: formData.email,
-            contraseña: formData.contraseña,
-            hobby: formData.hobby,
-            ocupacion: formData.ocupacion,
-            preferencias: formData.preferencias
-
-        }
-
-        fetch(urlUsers + id, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newData),
-
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Ha ocurrido un error con el servidor. Los datos no han sido modificados');
-                }
-                Swal.fire(
-                    'Error',
-                    'Ha ocurrido un error al modificar los datos',
-                    'error'
-                );
-
-
-            })
-             }; */
+    
 
 
 
@@ -97,7 +97,7 @@ const Perfil = () => {
 
                 <>
                     <div className="btns">
-                        <Button className='btn-update' type={'submit'} title={'Editar'} />
+                        <Button className='btn-update' type={'submit'} title={'Editar'} onClick={()=> upDateData()} />
                         <Button className={'btn-delete'} title={'Cancelar'}  onClick={()=> toggleInput()}  />
                     </div>
                     <Input className='infoUser-input' placeholder='Nombre' type="text" name='nombre' value={formData.nombre} onChange={handleChange} />

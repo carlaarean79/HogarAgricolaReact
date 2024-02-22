@@ -1,17 +1,19 @@
 // CardsMacrame.jsx
 import React, { useContext, useState } from 'react';
-import { ContextTallerMacrame } from '../ContextCards/ContextTallerMacrame';
+import { TutorialesContext } from '../ContextCards/TutorialesContext';
 import './CardsMacrame.css';
+import Button from '../Button/Button';
 
-const CardsMacrame = () => {
-    const { TallerMacrame, addTutorialMacrame, setAddTutorialMacrame } = useContext(ContextTallerMacrame);
+const CardsTalleres = ({tutorial}) => {
+    const {  addTutorialMacrame, setAddTutorialMacrame } = useContext(TutorialesContext);
 
-    /*  const saveTutorial = (tutorial) => {
-         setAddTutorialMacrame([...addTutorialMacrame, tutorial]);
-     };
-  */
- const url = 'http://localhost:3030/tallerGuardadoCuenta'
+  const inicioSesion = ()=> {
+    console.log('debe iniciar sesion para guardar el tutorial');
+  }
+  
+ const url = 'http://localhost:3030/cuenta'
     const addData = (tutorial) => {
+        inicioSesion();
         
         try {
             // Realiza la solicitud POST al servidor para guardar los datos
@@ -20,7 +22,7 @@ const CardsMacrame = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ tutorial }), // Envia el valor del input al servidor
+                body: JSON.stringify( tutorial ), // Envia el valor del input al servidor
             })
             .then(response => {
                 if (!response.ok) {
@@ -34,19 +36,17 @@ const CardsMacrame = () => {
             console.log(addTutorialMacrame);
           }
           return (
-                        <div className='tutoriales'>
-                            {TallerMacrame.map((tutorial) => (
-                                <div className="cards-macrame" key={tutorial.id}>
+                        
+                                <div className="cards-macrame">
                                     <h3>{tutorial.nombre}</h3>
                                     <img src={tutorial.imagen} alt={tutorial.nombre} />
                                     <div className="container-btn">
-                                        <button className='btn-watch'>Ver</button>
-                                        <button className='btn-add' onClick={() => addData(tutorial)}>Guardar</button>
+                                        <Button className='btn-watch' title={'VER'}/>
+                                        <Button className='btn-add' onClick={() => addData(tutorial)} title={'GUARDAR'}/>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                            
                     );
                 };
 
-            export default CardsMacrame;
+            export default CardsTalleres;
